@@ -1,0 +1,97 @@
+	* {
+	    padding: 0px;
+	    margin: 0px;
+	    box-sizing: border-box;
+	}
+	
+	body {
+	    background: #F0F0F0;
+	}
+	
+	.custom-card {
+	    min-width: 140px;
+	    display: inline-block;
+	}
+	
+	.card-modulo-info {
+	    display: inline-block;
+	    margin-left: 20px;
+	}
+	
+	.card-modulo-info .btn.btn-success {
+	    background-color: #92D050;
+	    color: #FFF;
+	    border: 0;
+	    border-radius: 0;
+	}
+	/*******************************/
+	
+	.custom-card .card-body .fas,
+	.custom-card .card-body .far {
+	    font-size: 66px;
+	    color: #FFF;
+	}
+	
+	.custom-card .card-body {
+	    background-color: #000;
+	    color: #FFF;
+	    font-size: 48px;
+	    text-align: center;
+	}
+	
+	.custom-card .card-head {
+	    background-color: #069;
+	    color: #FFF;
+	    text-align: center;
+	    font-size: 16px;
+	}
+	/*******************************/
+	
+	.card-wrap-modulo {
+	    background-color: #FFF;
+	    border: 1px solid #CCC;
+	    min-height: 380px;
+	    margin-bottom: 20px;
+	    transition: .2s;
+	}
+	
+	.card-wrap-modulo:hover {
+	    margin-top: 2px;
+	    box-shadow: 0px 4px 10px rgb(116, 130, 150);
+	}
+	
+	.card-wrap-modulo .card-body {
+	    text-align: center;
+	}
+	
+	.card-wrap-modulo .card-body h3 {
+	    font-weight: bold;
+	    letter-spacing: -1px;
+	    font-size: 18px;
+	}
+	
+	.card-wrap-modulo .card-body .btn.btn-success {
+	    background-color: #92D050;
+	    color: #FFF;
+	    border: 0;
+	    border-radius: 0;
+	}
+	
+	.card-wrap-modulo .card-head {
+	    background-color: #4472C4;
+	    color: #FFF;
+	    text-align: center;
+	    padding: 4px;
+	}
+	
+	.card-wrap-modulo .card-display {
+	    background-color: #222A35;
+	    text-align: center;
+	    padding: 20px;
+	}
+	
+	.card-wrap-modulo .card-display .fas,
+	.card-wrap-modulo .card-display .far {
+	    font-size: 100px;
+	    color: #FFF;
+	}
