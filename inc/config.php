@@ -27,6 +27,13 @@ class Sql {
 		unset($result);
 		return $data;
 	}
+
+	public function insert($string_query){
+		$result = $this->query($string_query);
+	}
+	public function update($string_query){
+		$result = $this->query($string_query);	
+	}
 	public function __destruct(){
 
 		mysqli_close($this->conn);
@@ -34,6 +41,3 @@ class Sql {
 	}
 
 }
-
-// $c = new Sql();
-// $c->conn;
