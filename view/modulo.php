@@ -9,6 +9,7 @@ $status = empty($currentModulo['status']) && $currentModulo['status'] != '0' ? '
 <div class="container">
     <h5>Contratar Módulo</h5>
     <div class="row" ng-app="myModulos" ng-controller="modulos-controller">
+        {{modulo.data_ent}}
         <div class="col-md-12">
             <div class="custom-card">
                 <div class="card-head"><?=$categoria?></div>
