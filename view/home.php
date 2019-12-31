@@ -16,9 +16,7 @@
 					<a ng-click="showModulo(modulo)" class="btn btn-success">{{modulo.btn_status}}</a>
 				</div>
 			</div>
-
 		</div>
-
 
 	</div> <!--row-->
 </div>	<!--container-->

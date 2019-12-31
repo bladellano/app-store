@@ -40,17 +40,6 @@ $app->post(
 }
 );
 
-
-$app->get('/mod',function(){
-
-    $sql = new Sql();
-
-    $array = $sql->select("SELECT * FROM modulos_ativos WHERE cod_cliente = 123 ");
-
-    echo json_encode($array[0]);
-
-});
-
 $app->get(
   '/modulo-:cod',
   function ($cod) {

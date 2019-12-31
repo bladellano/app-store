@@ -21,34 +21,23 @@ $status = empty($currentModulo['status']) && $currentModulo['status'] != '0' ? '
                 <h4><?=$nome_modulo?></h4>
                 <p><?=$frase_preco?></p>
                 <a ng-click="changeStatusModuloCliente(<?=$cod_modulo?>,<?=$status?>,<?=$cod_cliente?>)" class="btn btn-success">
-                    <? echo ($btn_status == 'Contratar') ? 'Contratar e ativar o módulo': $btn_status; ?>
+                    <?php echo ($btn_status == 'Contratar') ? 'Contratar e ativar o módulo': $btn_status; ?>
                 </a>
             </div>
         </div><!--col-md-12-->
     </div><!--row-->
     <div class="row">
-       <div class="col-md-12">
-           <p></p>
-           <h5>Sobre o módulo</h5>
-           <p><?=$descricao?></p>
-       </div>
-   </div>
+     <div class="col-md-12">
+         <p></p>
+         <h5>Sobre o módulo</h5>
+         <p><?=$descricao?></p>
+     </div>
+ </div>
 </div><!--container-->
 
 <script>
     var app = angular.module('myModulos', []);
     app.controller('modulos-controller', function($scope, $http, $window) {
-
-        $scope.modulo = [];
-
-        $http({
-            method: 'GET',
-            url   : 'mod'
-        }).then(function successCallback(response) {
-            $scope.modulo = response.data;
-        }, function errorCallback(response) {
-            alert(response);
-        });
 
         $scope.changeStatusModuloCliente = function(_cod_modulo,_status,_cod_cliente){
 
@@ -61,8 +50,7 @@ $status = empty($currentModulo['status']) && $currentModulo['status'] != '0' ? '
                     cod_cliente:_cod_cliente
                 })
             }).then(function successCallback(response) {
-                // console.log(response.data);
-                // console.log(response.data.success);                
+                     
                 if(response.data.success == true){
                     $window.location.href = "./";
                 }
