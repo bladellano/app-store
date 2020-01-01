@@ -1,13 +1,13 @@
-<div class="container">
+<div class="container" ng-app="myModulos" ng-controller="modulos-controller">
 
-	<p class="display-4 text-center">App Store</p>
+	<p class="display-4 text-center">{{appName}}</p>
 
-	<div class="row" ng-app="myModulos" ng-controller="modulos-controller">
+	<div class="row"  >
 
 		<div class="col-md-3" ng-repeat="modulo in modulos">
 			<div class="card-wrap-modulo">
 				<div class="card-head">{{modulo.categoria}}</div>
-				<div class="card-display" style="background-color:{{modulo.bgcolor}}">
+				<div class="card-display" ng-style="{'background-color':modulo.bgcolor}">
 					<i class="{{modulo.fontawesome}}"></i>
 				</div>
 				<div class="card-body">
@@ -23,8 +23,10 @@
 
 <script>
 	var app = angular.module('myModulos', []);
-	app.controller('modulos-controller', function($scope, $http, $location, $window) {
+	app.controller('modulos-controller', function($scope, $http, $window) {
 		
+		$scope.appName = "App Store";
+
 		$scope.modulos = [];
 
 		$http({
