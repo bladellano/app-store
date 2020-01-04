@@ -81,6 +81,7 @@ $app->get(
         foreach ($aModulos as &$modulo) {/* Modifica o array, acrescenta mais chaves com informações */
 
           $modulo['cod_cliente'] = $cod_cliente;
+          $modulo['nome_modulo'] = utf8_decode($modulo['nome_modulo']);
 
           if($modulo['preco']== 0){
               $modulo['frase_preco'] = 'Gratuito';

@@ -29,7 +29,7 @@ $status = empty($currentModulo['status']) && $currentModulo['status'] != '0' ? '
          <div class="col-md-12">
              <p></p>
              <h5>Sobre o módulo</h5>
-             <p><?=$descricao?></p>
+             <p><?=utf8_decode($descricao)?></p>
          </div>
      </div>
  </div>
